@@ -1,14 +1,14 @@
 <odoo>
-    <record id="view_game_resource_tree" model="ir.ui.view">
-        <field name="name">game.resource.tree</field>
+    <record id="view_game_resource_list" model="ir.ui.view">
+        <field name="name">game.resource.list</field>
         <field name="model">game.resource</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name"/>
                 <field name="category"/>
                 <field name="price"/>
                 <field name="availability"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -30,15 +30,15 @@
         </field>
     </record>
 
-    <record id="view_player_inventory_tree" model="ir.ui.view">
-        <field name="name">player.inventory.tree</field>
+    <record id="view_player_inventory_list" model="ir.ui.view">
+        <field name="name">player.inventory.list</field>
         <field name="model">player.inventory</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="player_id"/>
                 <field name="resource_id"/>
                 <field name="purchase_date"/>
-            </tree>
+            </list>
         </field>
     </record>
 </odoo>
