@@ -1,0 +1,44 @@
+<odoo>
+    <record id="view_game_resource_tree" model="ir.ui.view">
+        <field name="name">game.resource.tree</field>
+        <field name="model">game.resource</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="category"/>
+                <field name="price"/>
+                <field name="availability"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_game_resource_form" model="ir.ui.view">
+        <field name="name">game.resource.form</field>
+        <field name="model">game.resource</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="category"/>
+                        <field name="price"/>
+                        <field name="availability"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_player_inventory_tree" model="ir.ui.view">
+        <field name="name">player.inventory.tree</field>
+        <field name="model">player.inventory</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="player_id"/>
+                <field name="resource_id"/>
+                <field name="purchase_date"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
