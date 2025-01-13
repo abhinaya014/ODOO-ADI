@@ -16,13 +16,13 @@ class GameResource(models.Model):
         ('ability', 'Ability'),
     ], string='Category', required=True)
     availability = fields.Boolean(string='Available', default=True)
-
- currency_id = fields.Many2one('res.currency', string='Currency', 
+    currency_id = fields.Many2one('res.currency', string='Currency', 
         default=lambda self: self.env.company.currency_id.id)
 
     def toggle_availability(self):
         for record in self:
             record.availability = not record.availability
+
 
 class PlayerInventory(models.Model):
     _name = 'player.inventory'
