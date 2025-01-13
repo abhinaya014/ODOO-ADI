@@ -1,10 +1,4 @@
 <odoo>
-    <menuitem id="menu_game_resources_root" name="Game Resources" sequence="10"/>
-
-    <menuitem id="menu_game_resources" name="Resources" parent="menu_game_resources_root" sequence="20" action="action_game_resource"/>
-
-    <menuitem id="menu_player_inventory" name="Player Inventory" parent="menu_game_resources_root" sequence="30" action="action_player_inventory"/>
-
     <record id="action_game_resource" model="ir.actions.act_window">
         <field name="name">Game Resources</field>
         <field name="res_model">game.resource</field>
@@ -16,4 +10,18 @@
         <field name="res_model">player.inventory</field>
         <field name="view_mode">tree,form</field>
     </record>
+
+    <menuitem id="menu_game_resources_root" name="Game Resources" sequence="10"/>
+
+    <menuitem id="menu_game_resources" 
+              name="Resources" 
+              parent="menu_game_resources_root" 
+              sequence="20" 
+              action="action_game_resource"/>
+
+    <menuitem id="menu_player_inventory" 
+              name="Player Inventory" 
+              parent="menu_game_resources_root" 
+              sequence="30" 
+              action="action_player_inventory"/>
 </odoo>
