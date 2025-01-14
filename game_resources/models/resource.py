@@ -18,7 +18,7 @@ class GameResource(models.Model):
     availability = fields.Boolean(string='Available', default=True)
     currency_id = fields.Many2one('res.currency', string='Currency', 
         default=lambda self: self.env.company.currency_id.id)
-        image = fields.Binary(string='Image', attachment=True)
+    image = fields.Binary(string='Image', attachment=True)
 
     def toggle_availability(self):
         for record in self:
