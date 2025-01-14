@@ -7,7 +7,7 @@
         It integrates with Unity for synchronization of data.
     """,
     'author': 'ADI',
-    'depends': ['base', 'base_rest', 'base_rest_datamodel'],
+    'depends': ['base'],
     
     'data': [
         'security/ir.model.access.csv',
