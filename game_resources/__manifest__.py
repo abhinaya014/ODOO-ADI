@@ -7,11 +7,13 @@
         It integrates with Unity for synchronization of data.
     """,
     'author': 'ADI',
-    'depends': ['base'],
+    'depends': ['base', 'base_rest'],
+    
     'data': [
         'security/ir.model.access.csv',
         'views/resource_views.xml',
         'views/menu_views.xml',
+        
 
     ],
     'installable': True,
