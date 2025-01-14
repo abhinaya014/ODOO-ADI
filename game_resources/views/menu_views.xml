@@ -1,10 +1,5 @@
 <odoo>
-    <!-- Define actions first -->
-    <record id="action_game_resource" model="ir.actions.act_window">
-        <field name="name">Game Resources</field>
-        <field name="res_model">game.resource</field>
-        <field name="view_mode">tree,form</field>
-    </record>
+
 
     <record id="action_player_inventory" model="ir.actions.act_window">
         <field name="name">Player Inventory</field>
