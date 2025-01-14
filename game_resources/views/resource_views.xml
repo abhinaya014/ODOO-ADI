@@ -79,11 +79,10 @@
     </record>
 
     <!-- Update the action to include kanban view -->
-  <record id="action_game_resource" model="ir.actions.act_window">
+<record id="action_game_resource" model="ir.actions.act_window">
     <field name="name">Game Resources</field>
     <field name="res_model">game.resource</field>
     <field name="view_mode">kanban,tree,form</field>
-    <field name="view_type">form</field>
     <field name="help" type="html">
         <p class="o_view_nocontent_smiling_face">
             Create your first game resource!
