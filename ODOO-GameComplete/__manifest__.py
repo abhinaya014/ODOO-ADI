@@ -4,7 +4,7 @@
     'version': '1.0',
     'summary': 'Complete module for game management: players, matches, and inventory',
     'description': 'Includes full functionality with models, views, controllers, and security for Postman CRUD operations.',
-    'author': 'ChatGPT',
+    'author': 'Abhinaya',
     'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',
