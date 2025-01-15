@@ -1,0 +1,29 @@
+
+<odoo>
+    <!-- Menú principal -->
+    <menuitem id="menu_game_root" name="Game Management" sequence="10"/>
+
+    <!-- Submenús -->
+    <menuitem id="menu_game_players" name="Players" parent="menu_game_root" action="action_game_players" sequence="20"/>
+    <menuitem id="menu_game_matches" name="Matches" parent="menu_game_root" action="action_game_matches" sequence="30"/>
+    <menuitem id="menu_game_inventory" name="Inventory" parent="menu_game_root" action="action_game_inventory" sequence="40"/>
+
+    <!-- Acciones para vistas -->
+    <record id="action_game_players" model="ir.actions.act_window">
+        <field name="name">Players</field>
+        <field name="res_model">game.player</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_game_matches" model="ir.actions.act_window">
+        <field name="name">Matches</field>
+        <field name="res_model">game.match</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_game_inventory" model="ir.actions.act_window">
+        <field name="name">Inventory</field>
+        <field name="res_model">game.inventory</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
