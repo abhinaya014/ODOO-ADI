@@ -1,4 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_game_player,access_game_player,model_game_player,,1,1,1,1
-access_game_match,access_game_match,model_game_match,,1,1,1,1
-access_game_inventory,access_game_inventory,model_game_inventory,,1,1,1,1
