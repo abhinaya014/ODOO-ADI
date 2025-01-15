@@ -1,4 +1,3 @@
-
 <odoo>
     <!-- Menú principal -->
     <menuitem id="menu_game_root" name="Game Management" sequence="10"/>

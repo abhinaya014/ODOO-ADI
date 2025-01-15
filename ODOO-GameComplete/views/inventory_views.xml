@@ -1,4 +1,3 @@
-
 <odoo>
     <record id="view_form_inventory" model="ir.ui.view">
         <field name="name">game.inventory.form</field>

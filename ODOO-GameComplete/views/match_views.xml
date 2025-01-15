@@ -1,4 +1,3 @@
-
 <odoo>
     <record id="view_form_match" model="ir.ui.view">
         <field name="name">game.match.form</field>

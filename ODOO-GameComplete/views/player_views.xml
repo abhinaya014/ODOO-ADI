@@ -1,4 +1,3 @@
-
 <odoo>
     <record id="view_form_player" model="ir.ui.view">
         <field name="name">game.player.form</field>

@@ -1,4 +1,3 @@
-
 from odoo import models, fields
 
 class Match(models.Model):
