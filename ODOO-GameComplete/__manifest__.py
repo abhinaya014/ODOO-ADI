@@ -15,3 +15,5 @@
     'installable': True,
     'application': True,
 }
+
+    'views/menu_views.xml',
