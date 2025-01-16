@@ -1,0 +1,31 @@
+<odoo>
+    <record id="view_game_player_tree" model="ir.ui.view">
+        <field name="name">game.player.tree</field>
+        <field name="model">res.users</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="email"/>
+                <field name="is_game_player"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_game_player_form" model="ir.ui.view">
+        <field name="name">game.player.form</field>
+        <field name="model">res.users</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="email"/>
+                        <field name="is_game_player"/>
+                        <field name="matches_played" widget="one2many_list"/>
+                        <field name="inventory" widget="one2many_list"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
