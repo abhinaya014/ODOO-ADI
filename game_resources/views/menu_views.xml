@@ -1,30 +1,37 @@
 <odoo>
-
-
+    <!-- Acción para Player Inventory -->
     <record id="action_player_inventory" model="ir.actions.act_window">
         <field name="name">Player Inventory</field>
         <field name="res_model">player.inventory</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-    <!-- Define base menu -->
+    <!-- Acción para Game Resources -->
+    <record id="action_game_resource" model="ir.actions.act_window">
+        <field name="name">Game Resources</field>
+        <field name="res_model">game.resource</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <!-- Menú principal -->
     <menuitem 
         id="menu_game_resources_root" 
         name="Game Resources" 
         sequence="10"/>
 
-    <!-- Define submenu items with explicit action references -->
+    <!-- Submenú para Game Resources -->
     <menuitem 
         id="menu_game_resources" 
         name="Resources" 
-        parent="game_resources.menu_game_resources_root" 
+        parent="menu_game_resources_root" 
         sequence="20" 
-        action="game_resources.action_game_resource"/>
+        action="action_game_resource"/>
 
+    <!-- Submenú para Player Inventory -->
     <menuitem 
         id="menu_player_inventory" 
         name="Player Inventory" 
-        parent="game_resources.menu_game_resources_root" 
+        parent="menu_game_resources_root" 
         sequence="30" 
-        action="game_resources.action_player_inventory"/>
+        action="action_player_inventory"/>
 </odoo>
