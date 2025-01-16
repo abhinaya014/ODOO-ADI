@@ -41,6 +41,7 @@ class GamePlayer(models.Model):
     inventory = fields.One2many('player.inventory', 'player_id', string='Inventory')
 
 
+
 class GameMatch(models.Model):
     _name = 'game.match'
     _description = 'Game Match'
