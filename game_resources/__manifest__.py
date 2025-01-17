@@ -12,9 +12,9 @@
     'data': [
         'security/ir.model.access.csv',
         'views/resource_views.xml',
-        'views/player_views.xml',
-        'views/match_views.xml',
         'views/menu_views.xml',
+        
+
     ],
     'installable': True,
     'application': True,

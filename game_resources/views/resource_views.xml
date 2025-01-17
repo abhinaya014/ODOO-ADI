@@ -84,6 +84,7 @@
     </field>
 </record>
 
+    <!-- Update the action to include kanban view -->
 <record id="action_game_resource" model="ir.actions.act_window">
     <field name="name">Game Resources</field>
     <field name="res_model">game.resource</field>
