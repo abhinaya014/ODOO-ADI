@@ -6,7 +6,7 @@
         This module allows the management of game resources such as items, weapons, and skins.
         It integrates with Unity for synchronization of data.
     """,
-    'author': 'ADI',
+    'author': 'ADI BOSS',
     'depends': ['base', 'mail'],
     
     'data': [
