@@ -87,68 +87,69 @@
     </record>
 
     <!-- Player Inventory Views -->
-    <record id="view_player_inventory_tree" model="ir.ui.view">
-        <field name="name">player.inventory.tree</field>
-        <field name="model">player.inventory</field>
-        <field name="arch" type="xml">
-            <tree>
-                <field name="player_id"/>
-                <field name="resource_id"/>
-                <field name="purchase_date"/>
-                <field name="quantity"/>
-                <field name="state"/>
-            </tree>
-        </field>
-    </record>
+<record id="view_player_inventory_tree" model="ir.ui.view">
+    <field name="name">player.inventory.tree</field>
+    <field name="model">player.inventory</field>
+    <field name="arch" type="xml">
+        <tree>
+            <field name="player_id"/>
+            <field name="resource_id"/>
+            <field name="acquisition_date"/>
+            <field name="quantity"/>
+            <field name="state"/>
+        </tree>
+    </field>
+</record>
 
     <record id="view_player_inventory_form" model="ir.ui.view">
-        <field name="name">player.inventory.form</field>
-        <field name="model">player.inventory</field>
-        <field name="arch" type="xml">
-            <form>
-                <header>
-                    <field name="state" widget="statusbar"/>
-                </header>
-                <sheet>
+    <field name="name">player.inventory.form</field>
+    <field name="model">player.inventory</field>
+    <field name="arch" type="xml">
+        <form>
+            <header>
+                <field name="state" widget="statusbar"/>
+            </header>
+            <sheet>
+                <group>
                     <group>
-                        <group>
-                            <field name="player_id"/>
-                            <field name="resource_id"/>
-                            <field name="quantity"/>
-                        </group>
-                        <group>
-                            <field name="purchase_date"/>
-                            <field name="state"/>
-                        </group>
+                        <field name="player_id"/>
+                        <field name="resource_id"/>
+                        <field name="quantity"/>
                     </group>
-                </sheet>
-                <div class="oe_chatter">
-                    <field name="message_follower_ids"/>
-                    <field name="activity_ids"/>
-                    <field name="message_ids"/>
-                </div>
-            </form>
-        </field>
-    </record>
+                    <group>
+                        <field name="acquisition_date"/>
+                        <field name="state"/>
+                    </group>
+                </group>
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids"/>
+                <field name="activity_ids"/>
+                <field name="message_ids"/>
+            </div>
+        </form>
+    </field>
+</record>
 
     <record id="view_player_inventory_search" model="ir.ui.view">
-        <field name="name">player.inventory.search</field>
-        <field name="model">player.inventory</field>
-        <field name="arch" type="xml">
-            <search>
-                <field name="player_id"/>
-                <field name="resource_id"/>
-                <field name="state"/>
-                <filter string="Active Items" name="active_items" domain="[('state', '=', 'active')]"/>
-                <filter string="Inactive Items" name="inactive_items" domain="[('state', '=', 'inactive')]"/>
-                <group expand="0" string="Group By">
-                    <filter string="Player" name="group_by_player" context="{'group_by': 'player_id'}"/>
-                    <filter string="Resource" name="group_by_resource" context="{'group_by': 'resource_id'}"/>
-                    <filter string="Status" name="group_by_state" context="{'group_by': 'state'}"/>
-                </group>
-            </search>
-        </field>
-    </record>
+    <field name="name">player.inventory.search</field>
+    <field name="model">player.inventory</field>
+    <field name="arch" type="xml">
+        <search>
+            <field name="player_id"/>
+            <field name="resource_id"/>
+            <field name="state"/>
+            <filter string="Active Items" name="active_items" domain="[('state', '=', 'active')]"/>
+            <filter string="Inactive Items" name="inactive_items" domain="[('state', '=', 'inactive')]"/>
+            <group expand="0" string="Group By">
+                <filter string="Player" name="group_by_player" context="{'group_by': 'player_id'}"/>
+                <filter string="Resource" name="group_by_resource" context="{'group_by': 'resource_id'}"/>
+                <filter string="Status" name="group_by_state" context="{'group_by': 'state'}"/>
+                <filter string="Acquisition Date" name="group_by_date" context="{'group_by': 'acquisition_date'}"/>
+            </group>
+        </search>
+    </field>
+</record>
 
     <!-- Actions -->
     <record id="action_game_resource" model="ir.actions.act_window">

@@ -31,6 +31,12 @@ class PlayerInventory(models.Model):
 
     player_id = fields.Many2one('game.player', string='Player', required=True, tracking=True, ondelete='cascade')
     resource_id = fields.Many2one('game.resource', string='Resource', required=True, tracking=True, ondelete='restrict')
+    acquisition_date = fields.Datetime(string='Acquisition Date', default=fields.Datetime.now, tracking=True)
+    quantity = fields.Integer(string='Quantity', default=1, tracking=True)
+    state = fields.Selection([
+        ('active', 'Active'),
+        ('inactive', 'Inactive')
+    ], string='Status', default='active', tracking=True)
 
     _sql_constraints = [
         ('unique_player_resource', 'unique(player_id, resource_id)', 
