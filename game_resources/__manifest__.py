@@ -13,8 +13,8 @@
         'security/ir.model.access.csv',
         'views/resource_views.xml',
         'views/menu_views.xml',
+        'views/player_match_views.xml',
         
-
     ],
     'installable': True,
     'application': True,
