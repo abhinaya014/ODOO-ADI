@@ -96,6 +96,24 @@
     </field>
 </record>
 
+<record id="action_player_inventory" model="ir.actions.act_window">
+    <field name="name">Player Inventory</field>
+    <field name="res_model">player.inventory</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+<record id="view_player_inventory_tree" model="ir.ui.view">
+    <field name="name">player.inventory.tree</field>
+    <field name="model">player.inventory</field>
+    <field name="arch" type="xml">
+        <tree>
+            <field name="player_id"/>
+            <field name="resource_id"/>
+            <field name="purchase_date"/>
+        </tree>
+    </field>
+</record>
+
     <record id="view_player_inventory_tree" model="ir.ui.view">
         <field name="name">player.inventory.tree</field>
         <field name="model">player.inventory</field>

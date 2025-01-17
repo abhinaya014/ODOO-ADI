@@ -29,14 +29,8 @@ class PlayerInventory(models.Model):
     _description = 'Player Inventory'
     _inherit = ['mail.thread', 'mail.activity.mixin']
 
-    player_id = fields.Many2one('game.player', string='Player', required=True, tracking=True)
-    resource_id = fields.Many2one('game.resource', string='Resource', required=True, tracking=True)
-    purchase_date = fields.Datetime(string='Purchase Date', default=fields.Datetime.now, tracking=True)
-    quantity = fields.Integer(string='Quantity', default=1, tracking=True)
-    state = fields.Selection([
-        ('active', 'Active'),
-        ('inactive', 'Inactive')
-    ], string='Status', default='active', tracking=True)
+    player_id = fields.Many2one('game.player', string='Player', required=True, tracking=True, ondelete='cascade')
+    resource_id = fields.Many2one('game.resource', string='Resource', required=True, tracking=True, ondelete='restrict')
 
     _sql_constraints = [
         ('unique_player_resource', 'unique(player_id, resource_id)', 
