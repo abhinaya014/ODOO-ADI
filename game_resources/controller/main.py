@@ -1,3 +1,5 @@
+from odoo import http
+from odoo import fields
 from odoo.addons.base_rest.controllers import main
 from odoo.http import request
 from odoo.exceptions import ValidationError
